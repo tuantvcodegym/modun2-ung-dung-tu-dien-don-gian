@@ -4,6 +4,7 @@
 </head>
 <body>
 <form method="post">
+    <h2>Ung Tu Dien Anh-Viet</h2>
     <input type="text" name="search" placeholder="search"/>
     <input type="submit" value="Tim kiem"/>
 </form>
@@ -12,7 +13,7 @@
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         $searchword = $_POST["search"];
         $flag = 0;
-        foreach ($dictionary as $index => $description){     //$dictionary la mang can duyet. $index vi tri cua phan tu.
+        foreach ($dictionary as $index => $description){     //$dictionary la mang can duyet. $index key tro den gtri cua phan tu.
             if($index == $searchword){                       //$description: la value cua vi tri index.
                 echo "Tu: " .$index . ".</br> Nghia cua tu: " .$description;
                 echo "</br>";
